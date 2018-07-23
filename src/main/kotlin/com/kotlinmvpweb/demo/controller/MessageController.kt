@@ -1,12 +1,10 @@
 package com.kotlinmvpweb.demo.controller
 
-import com.kotlinmvpweb.demo.model.Greeting
 import com.kotlinmvpweb.demo.model.Message
 import com.kotlinmvpweb.demo.repository.MessageRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import java.util.concurrent.atomic.AtomicLong
 import javax.validation.Valid
 
 /**

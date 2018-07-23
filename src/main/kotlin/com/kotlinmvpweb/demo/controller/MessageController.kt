@@ -9,22 +9,24 @@ import org.springframework.web.bind.annotation.*
 import java.util.concurrent.atomic.AtomicLong
 import javax.validation.Valid
 
+/**
+ * This class is a controller that handles messages
+ *
+ * @property messageRepository the repository of messages
+ * @constructor Creates an empty controller.
+ */
 @RestController
 @RequestMapping("/api")
 class MessageController(private val messageRepository: MessageRepository) {
-
-    val counter = AtomicLong()
-
-    @GetMapping("/greeting")
-    fun greeting(@RequestParam(value = "name", defaultValue = "World") name: String) =
-            Greeting(counter.incrementAndGet(), "Hello, $name")
-
 
     @GetMapping("/messages")
     fun getAllmessages(): List<Message> =
             messageRepository.findAll()
 
-
+    /**
+     * Stores a message in our backend
+     * @return the inserted message in case it was successful
+     */
     @PostMapping("/messages")
     fun createNewMessage(@Valid @RequestBody message: Message): Message =
             messageRepository.save(message)
@@ -52,7 +54,7 @@ class MessageController(private val messageRepository: MessageRepository) {
     @DeleteMapping("/messages/{id}")
     fun deleteMessageById(@PathVariable(value = "id") messageId: Long): ResponseEntity<Void> {
 
-        return messageRepository.findById(messageId).map { message  ->
+        return messageRepository.findById(messageId).map { message ->
             messageRepository.delete(message)
             ResponseEntity<Void>(HttpStatus.OK)
         }.orElse(ResponseEntity.notFound().build())

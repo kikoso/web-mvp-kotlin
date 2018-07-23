@@ -30,13 +30,13 @@ repositories {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     runtime('mysql:mysql-connector-java')
-    compile "com.fasterxml.jackson.module:jackson-module-kotlin"
-    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    compile 'io.github.microutils:kotlin-logging:1.5.4'
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    implementation 'io.github.microutils:kotlin-logging:1.5.4'
 
     testCompile "org.jetbrains.kotlin:kotlin-test-junit"
 }

@@ -1,0 +1,16 @@
+# Writing an MVP for your Backend with Kotlin
+
+Showcasing how to create your Backend MVP using Kotlin.
+
+## Getting Started
+
+Clone this project, and import it directly in your IntelliJ. You are ready to go.
+
+### Prerequisites
+
+* [IntelliJ](https://www.jetbrains.com/idea/)
+* [*AMP](https://www.ampps.com/download)
+
+## Acknowledgments
+
+I would like to thank my colleagues and friend [Inaki Villar](https://twitter.com/inyaki_mwc) and [Marius Budin](https://twitter.com/mariusbudin) for their friendly and helpful review.
